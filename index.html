@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Page</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	<script>
+		$(function(){
+			$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+	</script>
+
+
+
+</head>
+<body>
+
+<div data-role="header" data-position="fixed" data-theme="a">
+		<h1>This header is ourside of the page</h1>
+	</div><!-- /header -->
+
+<div data-role="page">
+
+	<div data-role="content">
+		<p>Hello world</p>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+	<div data-role="footer" data-position="fixed" data-theme="a">
+		<h4>This footer is ourside of the page</h4>
+	</div><!-- /footer -->
+
+</body>
+</html>
