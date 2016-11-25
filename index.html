@@ -9,11 +9,13 @@
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <link rel="stylesheet" href="style.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src="newspull.js"></script>
 
 	<script>
 		$(function(){
 			$( "[data-role='header'], [data-role='footer']" ).toolbar();
 		});
+
 	</script>
 
 
@@ -25,10 +27,23 @@
 		<img class="main" src="cdm_logo.png" style="width:60px; display:block; margin:auto; padding:10px;" >
 	</div><!-- /header -->
 
-<div data-role="page">
+<div data-role="page" id="page1">
 
-	<div data-role="content">
-		<p>Hello world</p>
+	<div id="content" data-role="content">
+
+		<ul id="newsList" data-role="listview" data-inset="true" data-filter="true" data-theme="b">
+
+
+		</ul>
+
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+<div data-role="page" id="page2">
+
+	<div id="content" data-role="content">
+		<p>Page 2</p>
 
 
 
@@ -39,11 +54,11 @@
 	<div data-role="footer" data-position="fixed" data-theme="b" data-tap-toggle="false">
     <div data-role="navbar">
     <ul>
-      <li><a href="#" data-icon="home">Home</a></li>
+      <li><a href="#page1" data-icon="home">Home</a></li>
       <li><a href="#" data-icon="calendar">Events</a></li>
 			<li><a href="#" data-icon="grid">Social</a></li>
       <li><a href="#" data-icon="navigation">Links</a></li>
-      <li><a href="#" data-icon="mail">Contact</a></li>
+      <li><a href="#page2" data-icon="mail">Contact</a></li>
     </ul>
   </div>
 	</div><!-- /footer -->
