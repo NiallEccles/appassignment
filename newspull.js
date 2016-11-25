@@ -9,9 +9,9 @@ $(document).ready(function() {
 function getData() {
 
 
-		$.getJSON("http://www.creativedigitalmedia.ie/index.php/category/creativedigitalmedia/?json=1s", function(data) {
+		$.getJSON("http://www.creativedigitalmedia.ie/index.php/category/creativedigitalmedia/?json=1", function(data) {
 		$.mobile.showPageLoadingMsg();
-
+alert("hello");
         /*
         "data" contains the array of music data.
         Each element in the array is an object containing the ID, artist, album name, album image and URL.
@@ -29,14 +29,16 @@ function getData() {
         {
 
             //get the band details
-			var  poststitle = data[i].posts[i].title;
+			var  title = data[i].title;
       var  count = data[i].count;
  			var  status = data[i].status;
+      var  id = data[i].id;
+      var content = data[i].content;
 
 
 
  			//lets write the list
- 			var listEntry = "<li><a href='"+title+"'><img src='"+image+"' /><h3>"+posts[i].title+"</h3><p>Role: "+count+"</p></a></li>";
+ 			var listEntry = "<li><a href='"+title+"'><img src='"+image+"' /><h3>Hello"+title+"</h3><p>Role: "+id+"</p><p>"+content+"</p></a></li>";
 
  			$("#newsList").append(listEntry);
  			$("#newsList").listview("refresh");
