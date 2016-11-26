@@ -4,6 +4,7 @@
 	<title>ITB CDM</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -78,15 +79,16 @@
 
 	<div id="content" data-role="content">
 		<h3 id="contacthead">Contact us</h3>
-		<span class="titles">Name</span>
-		<input type="text" name="name" id="text-basic" value="" placeholder="Name">
-		<span class="titles">Student Number</span>
-		<input type="text" name="studentnum" id="text-basic" value="" placeholder="Student Number">
+		<span class="titles">Name*</span>
+		<input type="text" name="name" id="text-basic" value="" data-theme="a">
+		<span class="titles">Student Number*</span>
+		<input type="text" name="studentnum" id="text-basic" value="" data-theme="b">
 		<span class="titles">Email</span>
-		<input type="email" name="email" id="text-basic" value="" placeholder="Email">
-		<span class="titles">Message</span>
-		<textarea cols="40" rows="8" name="message" id="textarea" placeholder="Message"></textarea>
-
+		<input type="email" name="email" id="text-basic" value="" data-theme="b">
+		<span class="titles">Message*</span>
+		<textarea cols="40" rows="8" name="message" id="textarea" data-theme="b"></textarea>
+		<span id="required">* = required field</span>
+		<button class="ui-btn ui-corner-all" id="submit" data-theme="a">Submit</button>
 	</div><!-- /content -->
 
 </div><!-- /page -->
