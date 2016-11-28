@@ -10,8 +10,7 @@
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <link rel="stylesheet" href="style.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="shortcut icon" type="image/png" href="fav.png"/>
-	<script src="newspull.js"></script>
+	<link rel="shortcut icon" type="image/png" href="images/fav.png"/>
 
 	<script>
 		$(function(){
@@ -26,20 +25,12 @@
 <body>
 
 <div data-role="header" data-position="fixed" data-theme="b" data-tap-toggle="false">
-		<img class="main" src="cdm_logo.png" style="width:60px; display:block; margin:auto; padding:10px;" >
+		<img class="main" src="images/cdm_logo.png" style="width:60px; display:block; margin:auto; padding:10px;" >
 	</div><!-- /header -->
 
 <div data-role="page" id="page1">
-
-	<div id="content" data-role="content">
-
-		<ul id="newsList" data-role="listview" data-inset="true" data-filter="true" data-theme="b">
-
-
-		</ul>
-
+	<div data-role="content" id="postlist"></div>
 	</div><!-- /content -->
-
 </div><!-- /page -->
 
 <div data-role="page" id="page2">
@@ -105,5 +96,7 @@
     </ul>
   </div>
 	</div><!-- /footer -->
+<script src="newspull.js"></script>
+<script src="http://www.creativedigitalmedia.ie/index.php/category/creativedigitalmedia/?json=1&callback=listPosts"></script>
 </body>
 </html>

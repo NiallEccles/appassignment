@@ -1,51 +1,34 @@
-//demo for dynamic musicapp from PHP and JSON
+function listPosts(data) {
+  var output = '<form class="ui-filterable"><input id="searchposts" data-type="search"></form>';
 
+  output += '<ul data-role="listview" data-filter="true" data-input="#searchposts">';
+  $.each(data.posts, function(key, val) {
 
-$(document).ready(function() {
-  getData();
-});
+    var tempDiv = document.createElement("tempDiv");
+    tempDiv.innerHTML = val.excerpt;
+    $("a", tempDiv).remove();
+    var excerpt = tempDiv.innerHTML;
 
+    output += '<li>';
+    output += '<a href="#blogpost" onclick = "showPost(' + val.id + ')">';
+    output += (val.thumbnail) ?
+      '<img src="' + val.thumbnail + '" alt="' + val.title + '">':
+      '<img src="images/placeholder.png" alt="ITB Logo">';
+    output += '<h3>' + val.title + "</h3>";
+    output += '<p>' + excerpt + "</p>";
+    output += '</a>';
+    output += '</li>';
+  }); //go through each post
+  output += "</ul>";
+  $('#postlist').html(output);
+} //listPosts
 
-function getData() {
-
-
-		$.getJSON("http://www.creativedigitalmedia.ie/index.php/category/creativedigitalmedia/?json=1", function(data) {
-		$.mobile.showPageLoadingMsg();
-alert("hello");
-        /*
-        "data" contains the array of music data.
-        Each element in the array is an object containing the ID, artist, album name, album image and URL.
-        */
-
-        // if there are no records in the database, display an error
-        if(data.length == 0)
-        {
-			alert("Ohh errr....this is embarrassing!");
-        }
-
-
-        // Add a item to the list view for each item in the data array
-        for(var i = 0; i < data.length; i++)
-        {
-
-            //get the band details
-			var  title = data[i].title;
-      var  count = data[i].count;
- 			var  status = data[i].status;
-      var  id = data[i].id;
-      var content = data[i].content;
-
-
-
- 			//lets write the list
- 			var listEntry = "<li><a href='"+title+"'><img src='"+image+"' /><h3>Hello"+title+"</h3><p>Role: "+id+"</p><p>"+content+"</p></a></li>";
-
- 			$("#newsList").append(listEntry);
- 			$("#newsList").listview("refresh");
-
-        }
-
-        // all loaded, so hide the spinner
-       $.mobile.hidePageLoadingMsg();
-    });
-}//end getData function
+function showPost(id) {
+  $.getJSON('http://www.creativedigitalmedia.ie/index.php/category/creativedigitalmedia/?json=1' + id + '&callback=?', function(data) {
+    var output = '<h3>' + data.post.title + '</h3>';
+    output += data.post.content;
+    output +='<p>'+data.post.author.name+'</p>'
+    output +='<p>'+data.post.date+'</p>'
+    $('#mypost').html(output);
+  });
+}
