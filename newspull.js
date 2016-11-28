@@ -1,7 +1,7 @@
 function listPosts(data) {
   var output = '<form class="ui-filterable"><input id="searchposts" data-type="search"></form>';
 
-  output += '<ul data-role="listview" data-filter="true" data-input="#searchposts">';
+  output += '<ul data-role="listview">'; /*data-filter="true" data-input="#searchposts"*/
   $.each(data.posts, function(key, val) {
 
     var tempDiv = document.createElement("tempDiv");
