@@ -13,7 +13,7 @@ function listPosts(data) {
     output += '<a href="#blogpost" onclick = "showPost(' + val.id + ')">';
     output += (val.thumbnail) ?
       '<img src="' + val.thumbnail + '" alt="' + val.title + '">':
-      '<img src="images/placeholder.png" alt="ITB Logo">';
+      '<img src="images/placeholder.png" alt="CDM Logo">';
     output += '<h3>' + val.title + "</h3>";
     output += '<p>' + excerpt + "</p>";
     output += '</a>';
@@ -23,8 +23,18 @@ function listPosts(data) {
   $('#postlist').html(output);
 } //listPosts
 
+/*function showPost(id) {
+  $.getJSON('http://www.creativedigitalmedia.ie/index.php/category/creativedigitalmedia/?json=get_post&post_id=' + id + '&callback=?', function(data) {
+    var output = '<h3>' + data.post.title + '</h3>';
+    output += data.post.content;
+    output +='<p>'+data.post.author.name+'</p>'
+    output +='<p>'+data.post.date+'</p>'
+    $('#mypost').html(output);
+  });
+}*/
+
 function showPost(id) {
-  $.getJSON('http://www.creativedigitalmedia.ie/index.php/category/creativedigitalmedia/?json=1' + id + '&callback=?', function(data) {
+  $.getJSON('http://www.creativedigitalmedia.ie/index.php/category/creativedigitalmedia/?json=get_post&post_id=' + id + '&callback=?', function(data) {
     var output = '<h3>' + data.post.title + '</h3>';
     output += data.post.content;
     output +='<p>'+data.post.author.name+'</p>'

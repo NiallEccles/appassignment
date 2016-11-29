@@ -3,6 +3,24 @@
   font-family: 'Roboto', sans-serif;
 }
 
+/* LIST STYLING */
+
+.ui-page-theme-a .ui-btn:active, html .ui-bar-a .ui-btn:active, html .ui-body-a .ui-btn:active, html body .ui-group-theme-a .ui-btn:active, html head+body .ui-btn.ui-btn-a:active
+{
+  color:#fff;
+  background-color:#f16666;
+  text-shadow:none;
+}
+
+.ui-page-theme-a .ui-btn:focus, html .ui-bar-a .ui-btn:focus, html .ui-body-a .ui-btn:focus, html body .ui-group-theme-a .ui-btn:focus, html head+body .ui-btn.ui-btn-a:focus, .ui-page-theme-a .ui-focus, html .ui-bar-a .ui-focus, html .ui-body-a .ui-focus, html body .ui-group-theme-a .ui-focus, html head+body .ui-btn-a.ui-focus, html head+body .ui-body-a.ui-focus
+{
+  box-shadow: none;
+}
+
+
+/* LIST STYLING */
+
+
 /* FOOTER NAV BAR STYLING */
 
 .ui-page-theme-b .ui-btn, html .ui-bar-b .ui-btn, html .ui-body-b .ui-btn, html body .ui-group-theme-b .ui-btn, html head+body .ui-btn.ui-btn-b, .ui-page-theme-b .ui-btn:visited, html .ui-bar-b .ui-btn:visited, html .ui-body-b .ui-btn:visited, html body .ui-group-theme-b .ui-btn:visited, html head+body .ui-btn.ui-btn-b:visited
@@ -26,7 +44,6 @@
   background-color: rgb(241,102,102);
   border-color: #f16666;
   color:#fff;
-  text-shadow:0 1px 0 #f16666;
 }
 
 .ui-page-theme-b a:visited, html .ui-bar-b a:visited, html .ui-body-b a:visited, html body .ui-group-theme-b a:visited
@@ -36,7 +53,7 @@
 
 .ui-page-theme-b .ui-btn:focus, html .ui-bar-b .ui-btn:focus, html .ui-body-b .ui-btn:focus, html body .ui-group-theme-b .ui-btn:focus, html head+body .ui-btn.ui-btn-b:focus, .ui-page-theme-b .ui-focus, html .ui-bar-b .ui-focus, html .ui-body-b .ui-focus, html body .ui-group-theme-b .ui-focus, html head+body .ui-btn-b.ui-focus, html head+body .ui-body-b.ui-focus
 {
-  box-shadow:0 0 12px #f16666;
+  box-shadow:none;
 
 }
 
@@ -54,6 +71,9 @@
   text-shadow: none;
 }
 
+#textarea:focus{
+  border:1px solid #f16666;
+}
 
 .ui-input-text input, .ui-input-search input
 {
@@ -86,11 +106,22 @@ textarea.ui-input-text.ui-textinput-autogrow
 
 
 #submit{
+  transition: all 300ms ease-in-out;
   background-color:#f16666;
   color:#fff;
   text-shadow:none;
   border-color:#f16666;
   width:90%;
+  margin:auto;
+  margin-top:25px;
+}
+
+#submit:focus{
+  transition: all 300ms ease-in-out;
+  background-color:#1d1d1d;
+  color:#fff;
+  text-shadow:none;
+  border-color:#f16666;
   margin:auto;
   margin-top:25px;
 }
