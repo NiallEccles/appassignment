@@ -16,7 +16,6 @@
 		$(function(){
 			$( "[data-role='header'], [data-role='footer']" ).toolbar();
 		});
-
 	</script>
 
 
@@ -47,16 +46,27 @@
 		<div id="mypost"></div>
 	</div>
 </section>
+
 <div data-role="page" id="page2">
-
-	<div id="content" data-role="content">
-		<p>Page 2</p>
-
-
-
+	<div data-role="content" id="eventlist"></div>
 	</div><!-- /content -->
-
 </div><!-- /page -->
+
+<section data-role="page" id="eventpost">
+<header data-theme="b" data-role="header">
+		<h1>header</h1>
+		<a href="index.html" class="ui-btn-left ui-btn ui-btn-inline
+				ui-btn-icon-notext ui-mini ui-corner-all
+					ui-icon-arrow-l">Home</a>
+		<a href="#" class="ui-btn-right ui-btn ui-btn-inline
+				ui-btn-icon-notext ui-mini ui-corner-all
+				ui-icon-info">Info</a>
+	</header><!-- header -->
+	<div data-role="content">
+		<div id="myevent"></div>
+	</div>
+</section>
+
 
 <div data-role="page" id="page3">
 
@@ -112,5 +122,6 @@
 	</div><!-- /footer -->
 <script src="newspull.js"></script>
 <script src="http://www.creativedigitalmedia.ie/index.php/category/creativedigitalmedia/?json=1&callback=listPosts"></script>
+<script src="http://www.creativedigitalmedia.ie/index.php/category/events/?json=1&callback=eventPosts"></script>
 </body>
 </html>
