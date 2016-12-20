@@ -15,7 +15,7 @@ $(document).on('pageshow', '#postlist', function(){
 function listPosts(data) {
   var output = '<form class="ui-filterable"><input id="searchposts" data-type="search"></form>';
 
-  output += '<ul data-role="listview">'; /*data-filter="true" data-input="#searchposts"*/
+  output += '<ul data-role="listview" data-filter="true" data-input="#searchposts">';
   $.each(data.posts, function(key, val) {
 
     var tempDiv = document.createElement("tempDiv");
@@ -50,7 +50,7 @@ function listPosts(data) {
 
 function showPost(id) {
   $.getJSON('http://www.creativedigitalmedia.ie/index.php/category/creativedigitalmedia/?json=get_post&post_id=' + id + '&callback=?', function(data) {
-    var output = '<h3>' + data.post.title + '</h3>';
+    var output = '<h3 id="posttitle">' + data.post.title + '</h3>';
     output += data.post.content;
     output +='<p>'+data.post.author.name+'</p>'
     output +='<p>'+data.post.date+'</p>'
@@ -61,9 +61,9 @@ function showPost(id) {
 // EVENT PULLER
 
 function eventPosts(data) {
-  var eventoutput = '<form class="ui-filterable"><input id="searchposts" data-type="search"></form>';
+  var eventoutput = '<form class="ui-filterable"><input id="eventposts" data-type="search"></form>';
 
-  eventoutput += '<ul data-role="listview">'; /*data-filter="true" data-input="#searchposts"*/
+  eventoutput += '<ul data-role="listview" data-filter="true" data-input="#eventposts">'; 
   $.each(data.posts, function(key, val) {
 
     var tempDiv = document.createElement("tempDiv");

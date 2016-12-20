@@ -133,3 +133,9 @@ textarea.ui-input-text.ui-textinput-autogrow
 
 
 /* CONTACT PAGE STYLING */
+
+
+#posttitle{
+  font-size: 26px;
+  text-align: center;
+}
