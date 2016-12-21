@@ -30,12 +30,14 @@ function listPosts(data) {
       '<img src="' + val.thumbnail + '" alt="' + val.title + '">':
       '<img src="images/placeholder.png" alt="CDM Logo">';
     output += '<h3>' + val.title + "</h3>";
-    output += '<p>' + excerpt + "</p>";
+    output += '<p>' +  excerpt + "</p>";
     output += '</a>';
     output += '</li>';
   }); //go through each post
   output += "</ul>";
   $('#postlist').html(output);
+
+
 } //listPosts
 
 /*function showPost(id) {
@@ -63,7 +65,7 @@ function showPost(id) {
 function eventPosts(data) {
   var eventoutput = '<form class="ui-filterable"><input id="eventposts" data-type="search"></form>';
 
-  eventoutput += '<ul data-role="listview" data-filter="true" data-input="#eventposts">'; 
+  eventoutput += '<ul data-role="listview" data-filter="true" data-input="#eventposts">';
   $.each(data.posts, function(key, val) {
 
     var tempDiv = document.createElement("tempDiv");
@@ -78,17 +80,17 @@ function eventPosts(data) {
       '<img src="' + val.thumbnail + '" alt="' + val.title + '">':
       '<img src="images/placeholder.png" alt="CDM Logo">';
     eventoutput += '<h3>' + val.title + "</h3>";
-    eventoutput += '<p>' + excerpt + "</p>";
+    eventoutput += '' + excerpt + "";
     eventoutput += '</a>';
     eventoutput += '</li>';
   }); //go through each post
   eventoutput += "</ul>";
   $('#eventlist').html(eventoutput);
-} //listPosts
+} //listEvents
 
 function showEvent(id) {
   $.getJSON('http://www.creativedigitalmedia.ie/index.php/category/events/?json=get_post&post_id=' + id + '&callback=?', function(data) {
-    var eventoutput = '<h3>' + data.post.title + '</h3>';
+    var eventoutput = '<h3 id="posttitle">' + data.post.title + '</h3>';
     eventoutput += data.post.content;
     eventoutput +='<p>'+data.post.author.name+'</p>'
     eventoutput +='<p>'+data.post.date+'</p>'
