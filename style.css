@@ -150,3 +150,69 @@ textarea.ui-input-text.ui-textinput-autogrow
   font-size:1em !important;
   margin:0px;
 }
+
+#main{
+  background-color:#1b2022;
+}
+
+#mast{
+  color:#fff;
+  text-shadow:none;
+  text-align:center;
+}
+
+#menu{
+  background-color:#1b2022;
+}
+
+#main-menu{
+  display:flex;
+  justify-content:center;
+}
+
+.ui-grid-a{
+  width:100%;
+  /*padding:0px 10px 0px 10px;*/
+  flex-direction:row;
+  flex-wrap: wrap;
+  float:none;
+  justify-content:center;
+}
+
+
+.grid{
+  margin:auto;
+  justify-content:center;
+  width:400px;
+
+}
+
+div.grid{
+  justify-content:center !important;
+}
+
+.block{
+  display:inline !important;
+  margin-right:35px;
+  float:left;
+  position:relative;
+  left:65px;
+  top:10px;
+}
+
+#icon-size{
+
+  font-size:50px;
+  background-color:#e30243;
+  width:100px;
+}
+
+
+.desc{
+  color:#fff;
+  text-shadow:none;
+  display:inline;
+  position:fixed;
+  text-align:center;
+  margin:0px 0px 0px 25px;
+}

@@ -12,7 +12,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="shortcut icon" type="image/png" href="images/fav.png"/>
 
-	<script>
+  <script>
 		$(function(){
 			$( "[data-role='header'], [data-role='footer']" ).toolbar();
 		});
@@ -25,190 +25,23 @@
 		<img class="main" src="images/cdm_logo.png" style="width:60px; display:block; margin:auto; padding:10px;" >
 </div><!-- /header -->
 
-<div data-role="page" id="page1">
-	<div data-role="content" id="postlist"></div>
-	</div><!-- /content -->
-</div><!-- /page -->
+<div data-role="page" id="menu">
+  <h1 id="mast">Welcome to the Creative Digital Media App</h1>
+	<div data-role="content" id="main-menu">
+    <div class="grid">
+      <div class="block"><a href="main.html#page1" rel="external" id="icon-size" class="ui-btn ui-icon-home ui-btn-icon-notext"></a><span class="desc">Home</span></div>
+      <div class="block"><a href="main.html#page2" rel="external" id="icon-size" class="ui-btn ui-icon-calendar ui-btn-icon-notext"></a><span class="desc">Events</span></div>
+      <div class="block"><a href="main.html#page3" rel="external" id="icon-size" class="ui-btn ui-icon-grid ui-btn-icon-notext"></a><span class="desc">Social</span></div>
+      <div class="block"><a href="main.html#page4" rel="external" id="icon-size" class="ui-btn ui-icon-navigation ui-btn-icon-notext"></a><span class="desc">Links</span></div>
+      <div class="block"><a href="main.html#page5" rel="external" id="icon-size" class="ui-btn ui-icon-mail ui-btn-icon-notext"></a><span class="desc">Contact</span></div>
+    </div>
+  </div>
+</div>
 
-<section data-role="page" id="blogpost">
-<header data-theme="b" data-role="header">
-		<h1 id="titleheader"></h1>
-		<a href="index.html" class="ui-btn-left ui-btn ui-btn-inline
-				ui-btn-icon-notext ui-mini ui-corner-all
-					ui-icon-arrow-l">Home</a>
-		<a href="#postpopInfo" data-rel="popup" data-transition="pop" class="ui-btn-right ui-btn ui-btn-inline
-				ui-btn-icon-notext ui-mini ui-corner-all
-				ui-icon-info my-tooltip-btn">Info</a>
-
-				<div data-role="popup" id="postpopInfo" class="ui-content" data-theme="a" style="max-width:350px;">
-					<p></p>
-				</div>
-
-	</header><!-- header -->
 	<div data-role="content">
 		<div id="mypost"></div>
 	</div>
 </section>
 
-<div data-role="page" id="page2">
-	<div data-role="content" id="eventlist"></div>
-	</div><!-- /content -->
-</div><!-- /page -->
-
-<section data-role="page" id="eventpost">
-<header data-theme="b" data-role="header">
-		<h1 id="eventtitleheader"></h1>
-		<a href="#page2" class="ui-btn-left ui-btn ui-btn-inline
-				ui-btn-icon-notext ui-mini ui-corner-all
-					ui-icon-arrow-l data-rel="back"">Home</a>
-		<a href="#eventpopInfo" data-rel="popup" data-transition="pop" class="ui-btn-right ui-btn ui-btn-inline
-				ui-btn-icon-notext ui-mini ui-corner-all
-				ui-icon-info my-tooltip-btn">Info</a>
-				<div data-role="popup" id="eventpopInfo" class="ui-content" data-theme="a" style="max-width:350px;">
-						<p></p>
-				</div>
-	</header><!-- header -->
-	<div data-role="content">
-		<div id="myevent"></div>
-	</div>
-</section>
-
-
-<div data-role="page" id="page3">
-
-	<div id="content" data-role="content">
-
-		<ul data-role="listview" id="socialicons">
-      <li>
-        <a href="https://www.facebook.com/creativedigitalmedia.ie" target="_blank">
-        <img src="images/facebook.png">
-        <h2>Facebook</h2>
-        <p>Creative Digital Media</p>
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/itbcdm" target="_blank">
-        <img src="images/twitter.png">
-        <h2>Twitter</h2>
-        <p>@itbcdm</p>
-        </a>
-      </li>
-			<li>
-        <a href="https://www.linkedin.com/groups/6543551" target="_blank">
-        <img src="images/linkedin.png">
-        <h2>LinkedIn</h2>
-        <p>ITB Creative Digital Media Alumni</p>
-        </a>
-      </li>
-			<li>
-        <a href="https://vimeo.com/itbcdm" target="_blank">
-        <img src="images/Vimeo.png">
-        <h2>Vimeo</h2>
-        <p>Creative Digital Media</p>
-        </a>
-      </li>
-			<li>
-        <a href="https://www.flickr.com/photos/39169296@N05/" target="_blank">
-        <img src="images/flickr.png">
-        <h2>Flickr</h2>
-        <p>Creative Digital Media</p>
-        </a>
-      </li>
-			<li>
-        <a href="https://www.youtube.com/user/itbcdm" target="_blank">
-        <img src="images/youtube.png">
-        <h2>YouTube</h2>
-        <p>itbcdm</p>
-        </a>
-      </li>
-    </ul>
-
-
-
-	</div><!-- /content -->
-
-</div><!-- /page -->
-
-<div data-role="page" id="page4">
-
-	<div id="content" data-role="content">
-
-		<ul data-role="listview" id="socialicons">
-      <li>
-        <a href="https://moodle.itb.ie/login/index.php" target="_blank">
-        <img src="images/moodle.png">
-        <h2>Moodle</h2>
-        <p>Access your modules and submit assignments</p>
-        </a>
-      </li>
-      <li>
-        <a href="http://www.itb.ie/CurrentStudents/sid.html" target="_blank">
-        <img src="images/sid.png">
-        <h2>Student Information Desk</h2>
-        <p>Dealing with administrative queries</p>
-        </a>
-      </li>
-			<li>
-        <a href="https://outlook.office.com/owa/?realm=student.itb.ie" target="_blank">
-        <img src="images/outlook.png">
-        <h2>Student Email</h2>
-        <p>ITB Outlook email</p>
-        </a>
-      </li>
-			<li>
-        <a href="http://tesla.itb.ie/eportal/index.jsp" target="_blank">
-        <img src="images/timetable.png">
-        <h2>Student Timetable</h2>
-        <p>Access your timetable</p>
-        </a>
-      </li>
-			<li>
-        <a href="http://www.itb.ie/CurrentStudents/passwordrecovery.html" target="_blank">
-        <img src="images/password.png">
-        <h2>Password Recovery</h2>
-        <p>Reset your password or create a new one</p>
-        </a>
-      </li>
-    </ul>
-
-
-
-	</div><!-- /content -->
-
-</div><!-- /page -->
-
-<div data-role="page" id="page5">
-
-	<div id="content" data-role="content">
-		<h3 id="contacthead">Contact us</h3>
-		<span class="titles">Name*</span>
-		<input type="text" name="name" id="text-basic" value="" data-theme="b">
-		<span class="titles">Student Number*</span>
-		<input type="text" name="studentnum" id="text-basic" value="" data-theme="b">
-		<span class="titles">Email</span>
-		<input type="email" name="email" id="text-basic" value="" data-theme="b">
-		<span class="titles">Message*</span>
-		<textarea cols="40" rows="8" name="message" id="textarea" data-theme="b"></textarea>
-		<span id="required">* = required field</span>
-		<button class="ui-btn ui-corner-all" id="submit" data-theme="b">Submit</button>
-	</div><!-- /content -->
-
-</div><!-- /page -->
-
-
-	<div data-role="footer" data-position="fixed" data-theme="b" data-tap-toggle="false">
-    <div data-role="navbar">
-    <ul>
-      <li><a href="#page1" data-icon="home">Home</a></li>
-      <li><a href="#page2" data-icon="calendar">Events</a></li>
-			<li><a href="#page3" data-icon="grid">Social</a></li>
-      <li><a href="#page4" data-icon="navigation">Links</a></li>
-      <li><a href="#page5" data-icon="mail">Contact</a></li>
-    </ul>
-  </div>
-	</div><!-- /footer -->
-<script src="newspull.js"></script>
-<script src="http://www.creativedigitalmedia.ie/index.php/category/creativedigitalmedia/?json=1&callback=listPosts"></script>
-<script src="http://www.creativedigitalmedia.ie/index.php/category/events/?json=1&callback=eventPosts"></script>
 </body>
 </html>
