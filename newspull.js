@@ -50,6 +50,7 @@ function listPosts(data) {
   });
 }*/
 
+
 function showPost(id) {
   $.getJSON('http://www.creativedigitalmedia.ie/index.php/category/creativedigitalmedia/?json=get_post&post_id=' + id + '&callback=?', function(data) {
     var output = '<h3 id="posttitle">' + data.post.title + '</h3>';
@@ -57,6 +58,14 @@ function showPost(id) {
     output +='<p>'+data.post.author.name+'</p>'
     output +='<p>'+data.post.date+'</p>'
     $('#mypost').html(output);
+
+    var titleheader ='';
+    titleheader += '<h1 style="text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">' + data.post.title + '</h1>';
+    $('#titleheader').html(titleheader);
+
+    var poppy = '<p><strong>Author:</strong> '+data.post.author.name+'</p>';
+    poppy += '<p><strong>Date:</strong> '+data.post.date+'</p>';
+    $('#postpopInfo').html(poppy);
   });
 }
 
@@ -95,5 +104,13 @@ function showEvent(id) {
     eventoutput +='<p>'+data.post.author.name+'</p>'
     eventoutput +='<p>'+data.post.date+'</p>'
     $('#myevent').html(eventoutput);
+
+    var eventtitleheader ='';
+    eventtitleheader += '<h1 style="text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">' + data.post.title + '</h1>';
+    $('#eventtitleheader').html(eventtitleheader);
+
+    var eventpoppy = '<p><strong>Author:</strong> '+data.post.author.name+'</p>';
+    eventpoppy += '<p><strong>Date:</strong> '+data.post.date+'</p>';
+    $('#eventpopInfo').html(eventpoppy);
   });
 }

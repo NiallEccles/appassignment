@@ -139,3 +139,14 @@ textarea.ui-input-text.ui-textinput-autogrow
   font-size: 26px;
   text-align: center;
 }
+
+
+#titleheader h1{
+  font-size:1em !important;
+  margin:0px;
+}
+
+#eventtitleheader h1{
+  font-size:1em !important;
+  margin:0px;
+}

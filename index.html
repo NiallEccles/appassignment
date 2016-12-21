@@ -32,13 +32,18 @@
 
 <section data-role="page" id="blogpost">
 <header data-theme="b" data-role="header">
-		<h1>header</h1>
+		<h1 id="titleheader"></h1>
 		<a href="index.html" class="ui-btn-left ui-btn ui-btn-inline
 				ui-btn-icon-notext ui-mini ui-corner-all
 					ui-icon-arrow-l">Home</a>
-		<a href="#" class="ui-btn-right ui-btn ui-btn-inline
+		<a href="#postpopInfo" data-rel="popup" data-transition="pop" class="ui-btn-right ui-btn ui-btn-inline
 				ui-btn-icon-notext ui-mini ui-corner-all
-				ui-icon-info">Info</a>
+				ui-icon-info my-tooltip-btn">Info</a>
+
+				<div data-role="popup" id="postpopInfo" class="ui-content" data-theme="a" style="max-width:350px;">
+					<p></p>
+				</div>
+
 	</header><!-- header -->
 	<div data-role="content">
 		<div id="mypost"></div>
@@ -52,13 +57,16 @@
 
 <section data-role="page" id="eventpost">
 <header data-theme="b" data-role="header">
-		<h1>header</h1>
+		<h1 id="eventtitleheader"></h1>
 		<a href="#page2" class="ui-btn-left ui-btn ui-btn-inline
 				ui-btn-icon-notext ui-mini ui-corner-all
 					ui-icon-arrow-l data-rel="back"">Home</a>
-		<a href="#" class="ui-btn-right ui-btn ui-btn-inline
+		<a href="#eventpopInfo" data-rel="popup" data-transition="pop" class="ui-btn-right ui-btn ui-btn-inline
 				ui-btn-icon-notext ui-mini ui-corner-all
-				ui-icon-info">Info</a>
+				ui-icon-info my-tooltip-btn">Info</a>
+				<div data-role="popup" id="eventpopInfo" class="ui-content" data-theme="a" style="max-width:350px;">
+						<p></p>
+				</div>
 	</header><!-- header -->
 	<div data-role="content">
 		<div id="myevent"></div>
