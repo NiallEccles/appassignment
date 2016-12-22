@@ -134,6 +134,9 @@ textarea.ui-input-text.ui-textinput-autogrow
 
 /* CONTACT PAGE STYLING */
 
+#active{
+  background-color: green;
+}
 
 #eventpost{
   text-shadow:none;
@@ -141,6 +144,12 @@ textarea.ui-input-text.ui-textinput-autogrow
 }
 iframe{
   width:100%;
+}
+
+#myevent img{
+  width:300px;
+  height:150px;
+  display:inline-block;
 }
 
 #posttitle{

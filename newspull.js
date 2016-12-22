@@ -100,7 +100,7 @@ function eventPosts(data) {
 function showEvent(id) {
   $.getJSON('http://www.creativedigitalmedia.ie/index.php/category/events/?json=get_post&post_id=' + id + '&callback=?', function(data) {
     var eventoutput = '<h3 id="posttitle">' + data.post.title + '</h3>';
-    eventoutput += data.post.content;
+    eventoutput += '<p class="eventcontent">'+data.post.content+'</p>';
     eventoutput +='<p><strong>Written by: </strong>'+data.post.author.name+'</p>'
     eventoutput +='<p><strong>Date: </strong>'+data.post.date+'</p>'
     $('#myevent').html(eventoutput);
