@@ -55,8 +55,8 @@ function showPost(id) {
   $.getJSON('http://www.creativedigitalmedia.ie/index.php/category/creativedigitalmedia/?json=get_post&post_id=' + id + '&callback=?', function(data) {
     var output = '<h3 id="posttitle">' + data.post.title + '</h3>';
     output += data.post.content;
-    output +='<p>'+data.post.author.name+'</p>'
-    output +='<p>'+data.post.date+'</p>'
+    output +='<p><strong>Written by: </strong>'+data.post.author.name+'</p>'
+    output +='<p><strong>Date: </strong>'+data.post.date+'</p>'
     $('#mypost').html(output);
 
     var titleheader ='';
@@ -101,8 +101,8 @@ function showEvent(id) {
   $.getJSON('http://www.creativedigitalmedia.ie/index.php/category/events/?json=get_post&post_id=' + id + '&callback=?', function(data) {
     var eventoutput = '<h3 id="posttitle">' + data.post.title + '</h3>';
     eventoutput += data.post.content;
-    eventoutput +='<p>'+data.post.author.name+'</p>'
-    eventoutput +='<p>'+data.post.date+'</p>'
+    eventoutput +='<p><strong>Written by: </strong>'+data.post.author.name+'</p>'
+    eventoutput +='<p><strong>Date: </strong>'+data.post.date+'</p>'
     $('#myevent').html(eventoutput);
 
     var eventtitleheader ='';

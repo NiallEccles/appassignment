@@ -135,6 +135,14 @@ textarea.ui-input-text.ui-textinput-autogrow
 /* CONTACT PAGE STYLING */
 
 
+#eventpost{
+  text-shadow:none;
+  width:100%;
+}
+iframe{
+  width:100%;
+}
+
 #posttitle{
   font-size: 26px;
   text-align: center;
@@ -205,8 +213,8 @@ div.grid{
   font-size:50px;
   background-color:#e30243;
   width:100px;
+  border:none;
 }
-
 
 .desc{
   color:#fff;
